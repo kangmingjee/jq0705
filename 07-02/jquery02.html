@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+
+
+    <style type="text/css">
+        div{border: 1px solid black;margin: 50px;}
+    </style>
+
+    <script lang="java">
+        // $(document).ready(function(){}) /*  jquery end */
+        $(function(){
+            $('.box1 p').click(function(){
+                //  alert("box1 p를 클릭했어요");
+                // console.log("클릭했어요")
+                $(this).hide();
+                })  /* box1 p click */
+
+            $('.box2 p').dblclick(function(){
+                $(this).hide();
+                })  /* box2 p dbclick */
+            $(".box3 p").mouseenter(function(){ 
+                $(this).css({"color" : "red"});
+            }) //box3 mouseenter
+
+            $(".box8 p").mouseover(function(){
+                $(this).css({"color" : "red"});
+            })//box8 mouseover
+            $(".box4 p").mouseover(function(){
+                $(this).css({"color" : "blue"});
+            }) //box4 mouseover
+            $(".box5 p").mousedown(function(){
+                $(this).css({"color" : "blue"});
+            }) //box4 mousedown
+            $(".box6 p").mouseup(function(){
+                $(this).css({"color" : "yellow"});
+            }) //box6 mouseup
+
+            $(".box7 p").hover(function(){
+                $(this).css({"background-color" : "lightgray"})
+            }) //box7 p box7 p
+
+            $(".box9 p").on({
+              mouseenter : function(){
+                $(this).css({"background" : "blue"})
+              },
+              mouseout : function(){
+                $(this).css({"background" : "red"})
+              },
+            click : function(){
+                $(this).css({"background" : "green"})
+            }
+    
+            })//box9 p on
+
+            $('.box10 input').focus(function(){
+                $(this).css({"background" : "green"});
+            })//box10 input
+            $(".box10 input").blur(function(){
+                $(this).css({"background" : "yellow"});
+            })//box10 input blur
+
+
+
+        }) /*  jquery end */
+    </script>
+
+</head>
+<body>
+    <div class="box1">
+        <p>click me 1</p>
+        <p>click me 2</p>
+        <p>click me 3</p>
+    </div>
+    <div class="box2">
+        <p>click me 1</p>
+        <p>click me 2</p>
+        <p>click me 3</p>
+    </div>
+    <div class="box3">
+        <p>enter me</p>
+    </div>
+    <div class="box4">
+        <p>mouseleave me</p>
+    </div>
+    <div class="box5">
+        <p>mouseleave me</p>
+    </div>
+    <div class="box6">
+        <p>mouseup me</p>
+    </div>
+    <div class="box7">
+        <p>hover</p>
+    </div>
+    <div class="box8">
+        <p>hover</p>
+    </div>
+    <div class="box9">
+        <p>hover123</p>
+    </div>
+    <div class="box10">
+        이름 : <input type="text"><br>
+        메일 : <input type="email"> <br>
+        주소 : <input type="password"> 
+    </div>
+
+</body>
+</html>

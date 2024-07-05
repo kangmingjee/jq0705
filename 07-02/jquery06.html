@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+
+    <script lang="java">
+
+        $(document).ready(function(){
+            
+            $(".left") .click(function(){
+            $(".ufo").animate({"left" : "-=20px"}, 500);
+        }) //left click
+
+            $(".right") .click(function(){
+            $(".ufo").animate({"left" : "+=20px"}, 500);
+        }) //right click
+
+            $(".top") .click(function(){
+            $(".ufo").animate({"top" : "+=20px"}, 500);
+        }) //top click
+
+            $(".bottom") .click(function(){
+            $(".ufo").animate({"top" : "-=20px"}, 500);
+        }) //bottom click
+        
+        }) //j end
+
+    </script>
+
+    <style type="text/css">
+        html,body{height: 100%;}
+        body{text-align: center;
+        background-image: linear-gradient(45deg, skyblue,white,skyblue);}
+        button{padding: 5px 15px; 
+        margin: 0 10px ; cursor: pointer;}
+
+        .box{
+            width: 700px;
+            height: 700px;
+            border: 20px solid black;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .ufo{
+            position: absolute;
+            left: 0;top: 0;
+        }
+    </style>
+</head>
+<body>
+        <h1> UFO move event</h1>
+
+        <button class="left">left</button>
+        <button class="right">right</button>
+        <button class="top">top</button>
+        <button class="bottom">bottom</button>
+
+        <div class="box">
+            <div class="ufo">
+                <img src="img/ufo.png" alt="ufo" >
+            </div>
+        </div><!-- box -->
+</body>
+</html>

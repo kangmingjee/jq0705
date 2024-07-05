@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a{text-decoration: none; text-align: center; color: white;}
+
+        .box{
+            width: 200px;
+            height: 160px;
+            text-align: center;
+            justify-content: center;
+            background: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .square{
+            width: 100%;
+            height:100%;
+            text-decoration: none;
+            display: inline-block;
+            /* padding: 20px; */
+            color: red;
+            position: relative;
+            /* background-color: bisque; */
+        }
+        .square span{
+            position: absolute;
+            background-color: white;
+            text-indent: -99999px;
+        }
+        .square span.line1{
+            width: 2px;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            animation: line1 2s infinite;
+
+        }
+        .square span.line2{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            left: 0;top: 0;
+            animation: line2 2s infinite;
+        }
+        .square span.line3{
+            width: 2px;
+            height: 100%;
+            background-color: white;
+            right: 0; top: 0;
+            animation: line3 2s infinite;
+        }
+        .square span.line4{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            right:0; bottom: 0;
+            animation: line4 2s infinite;
+        }
+
+        @keyframes line1{
+            0%{height: 0;}
+            25% , 100%{height: 100%;}
+        }
+        @keyframes line2{
+            0%, 25%{width:  0;}
+            50% , 100%{width: 100%;}
+        }
+        @keyframes line3{
+            0% , 50%{height: 0;}
+            75% , 100%{height: 100%;}
+        }
+        @keyframes line4{
+            0% ,75%{width: 0;}
+            100%{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <a href="#" class="square">
+                button
+                <span class="line1">1</span>
+                <span class="line2">2</span>
+                <span class="line3">3</span>
+                <span class="line4">4</span>
+            </a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+
+    <script lang="java">
+
+        $(function(){
+            $(".list li").mouseover(function(){
+                $(this).addClass("act");
+            })// mouseover
+       
+            $('.list li').mouseleave(function(){
+                $(".list li").removeClass("act");
+                // $(this).removeClass("act");
+            })// removeClass
+
+            $("button").click(function(){
+                $("h1 , p , span") .toggleClass("blue");
+            }) //click
+
+        })//jq end
+
+
+    </script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        ul,li{list-style: none;}
+
+        .list{text-align: center; margin: 50px 0;}
+        .list li{
+            display: inline-block;
+            border: 5px solid red;
+            filter: blur(5px);s
+        }
+        .list li img{
+            display: block;
+        }
+        .act{
+            filter: none !important;
+            border: 5px solid blue !important;
+        }
+        .blue{
+            color: blue;
+            font-weight: bold;
+            line-height: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li><img src="img/normal_01.png" alt=""></li>
+        <li><img src="img/normal_02.png" alt=""></li>
+        <li><img src="img/normal_03.png" alt=""></li>
+        <li><img src="img/normal_04.png" alt=""></li>
+        <li><img src="img/normal_05.png" alt=""></li>
+    </ul>
+
+    <h1> addClass removeClass toggleclass</h1>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum nulla quo sapiente fugiat necessitatibus enim, asperiores reiciendis temporibus ad quia dolorem cumque vero nihil,
+        srepudiandae neque hic sunt libero?s</p>
+
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minus temporibus, 
+        totam officia quae veritatis sit rerum dicta quam fugiat nam voluptatem repellendus recusandae nemo perspiciatis aliquam libero ducimus quod.</span>
+
+    <button>click me</button>
+</body>
+</html>

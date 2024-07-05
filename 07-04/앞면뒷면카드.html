@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body{   background: #2aa2da;
+                padding: 100px;
+                text-align: center;}
+
+        .box{
+            margin-bottom: 5px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            display: inline-block;
+        }
+        .box:hover .flip{
+            transform: rotateY(180deg);
+        } 
+
+        .flip{
+            transform-style:preserve-3d ;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transition: all 0.5s;
+        }
+
+        .face{
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            font-size: 50px;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .front{
+            background-color: tomato;
+        }
+
+        .back{
+            transform: rotateY(180deg);
+            background-color: teal;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+</body>
+</html>

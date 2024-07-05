@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $("button").click(function(){
+
+                console.log(b_back);
+
+                $('body').animate({"background-color" : b_back}, 500); 
+                
+            })//click
+            $(".list li").click(function(){
+                var bg = $(this).attr("bg");
+                $("body").animate({"background-color" : bg},500)
+            })
+            $("p").hover(function(){
+                var h_tit2 = $(this).attr('tit2');
+                $(this).text(h_tit2);
+            },function(){
+                var h_tit1 = $(this).attr('tit1');
+                $(this).text(h_tit1);
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+        <button>red</button>
+        <button>green</button>
+        <button>yellow</button>
+        <button>#658977</button>
+        <button>#005897</button>
+
+        <ul class="list">
+            <li bg="red">빨강</li>
+            <li bg="yellow">노랑</li>
+            <li bg="purple">보라</li>
+            <li bg="green">초록</li>
+            <li bg="black">블랙</li>
+        </ul>
+
+        <p tit1="홍길동" tit2='sdfsd632fsdf' >홍길동</p>
+        <p tit1="김길동" tit2='sdf123123123sddd55dfsd'>김길동</p>
+        <p tit1="강길동" tit2='sdfs12315523dfsdf '>강길동</p>
+        <p tit1="소길동" tit2='sdf12312sdfsdf' >소길동</p>
+
+ 
+</body>
+</html>

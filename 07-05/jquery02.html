@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $('.list1').siblings().css({"border":"1px solid red"});
+            $(".list4-children").parent(".list4").css({"background" : "pink"})
+            $(".list4-children").parents(".wrap").css({"background" : "hotpink"})
+            $(".wrap").children("h1").css({"color" : "yellow"});
+            $(".wrap").children("div").css({"color" : "green"});
+
+            $(".wrap").children("h1").css({'font-size': '50px'});
+            $(".wrap").children("div").css({'border': '1px solid black'});
+
+            $(".list2").prev().css({"padding" : "50px"});
+            $(".list2").prev().css({"padding" : "50px"});
+            
+            
+        })//jq close
+    </script>
+</head>
+<body>
+        <div class="wrap">
+            <div class="list1">list1
+                <h1>hello!!!</h1>
+            </div>
+            <p class="list2">list2</p>
+            <h1 class="list3">list3</h1>
+            <div class="list4">list4
+                <div class="list4-children">list4-children</div>
+            </div>
+        <p class="list5">list5</p>
+        <h1 class="list6">list6</h1>
+    </div>
+</body>
+</html>

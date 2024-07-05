@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+
+            $("div").click(function(){
+                $("div").removeClass("on");
+                $(this).addClass("on");
+            })//click on
+
+            $(".list li").click(function(){
+                $(".list li").removeClass("act");
+                $(this).addClass("act");
+            })//click act
+
+            $(".box4").hover(function(){
+                $(this).addClass("bg");
+            },function(){
+                $(this).removeClass("bg");
+            })//
+
+
+            })//jq end
+
+    </script>
+
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+
+        div{border: 1px solid red;margin: 100px;}
+
+        .on{
+            background-color: aqua;
+        }
+
+        .act{
+            background-color: red;
+            padding: 10px;
+            color: wheat;
+        }
+        .box4{
+            width:600px;
+            height:400px;
+            background-image: url(img/002.jpg);
+            background-repeat:no-repeat;
+        }
+        .bg{
+            background-image: url(img/006.jpg);
+        }
+
+
+    </style>
+</head>
+<body>
+        <h1 class="logo">logo</h1>
+
+        <div class="box1">box1</div>
+
+        <div class="box2">box2</div>
+
+        <div class="box3">box3</div>
+
+        <div class="box4">box4</div>
+        
+        <ul class="list">
+            <li class="act">list</li>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul><!-- list -->
+</body>
+</html>

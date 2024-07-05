@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+
+            //  var src = $("img").attr("src"); 
+            //  console.log(src);
+
+            //  var alt = $("img").attr("alt")
+            //  console.log(alt);
+
+            // var tit = $("img") .attr("title")
+            // console.log(tit);
+
+            // $("img").attr("title" , "this is car");
+            // $("img").attr("src" , "img/001.jpg");
+            
+            // var bg =$(".p").attr("bg");
+            // console.log(bg);
+
+            // var bg =$("p").attr("bg1");
+            // console.log(bg1);
+
+            $("p").hover(function(){
+                var bg = $(this).attr("bg");
+                $(this).css({"background" : back })
+
+            },function(){
+                var back1 = $(this).attr("bg1");
+                $(this).css({"background" : back1 })
+            })//hover
+            $("img").hover(function(){
+                //  $(this).attr("img2");
+                var img2= $(this).attr("img2");
+                console.log("img2 : " , img2 );
+                $(this).attr("src" , img2 );
+
+            },function(){
+                var img1= $(this).attr("img1");
+                console.log("img1 : " , img1 );
+                $(this).attr("src" , img1 );
+
+            })//hover img
+
+            var a_txt = $
+
+
+        })//jq close
+    </script>
+</head>
+<body>
+        <img src="img/001.jpg" alt="car" title="자동차입니다" img1="img/001.jpg" img2="img/002.jpg">
+
+        <a href="http://naver.com">네이버</a>
+        
+        <div class="text1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Hic dolore molestias earum facere adipisci delectus iusto dolor suscipit, sapiente ad, obcaecati dolorum nisi cumque atque corrupti repellat natus eius fuga?
+        </div>
+        <p class="p1" bg="red"  bg1="yellow">홍길동 </p>
+        <p class="p1" bg="green"  bg1="pink">김길동 </p>
+
+</body>
+</html>

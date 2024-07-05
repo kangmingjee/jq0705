@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="Script/jquery-3.7.1.js"></script>
+
+    <script src="Script/jquery-ui.js"></script>
+
+<!-- <SCript lang="java"> --><!-- </SCript> -->
+    <script src="java">
+            // $(document).ready(function(){}//실행문만들기)//
+            $(function(){
+                 //실행문 만들기})// 
+                //  $('button') tag 선택자
+                //  $('#button') id선택자
+                //  $('button')  class 선택자
+                $('button').click(function(){
+                    $("h1").hide();
+                    $(".test").css("color" ,"red");
+                    $(".test").css("font-size","50px");
+                    
+                    // $(".test").css("color","red") .css("font-size" ,"50px");
+                    $(".test").css("red") .css("font-size" : "50px");
+                })
+            })
+                //button click
+
+                
+
+
+
+
+    </script>
+    <style type="text/css">
+        h1.test{font-size: 30px;}
+    </style>
+
+
+</head>
+<body>
+    <h1 class="test"> header - 1 </h1>
+    <p class="test"> this is paragraph</p>
+    <p id="test">this is another paragraph</p>
+
+    <button>click me</button>
+</body>
+</html>

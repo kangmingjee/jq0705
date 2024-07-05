@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+           $(".btn1").click(function(){
+            $(".img_view").slideUp();
+           })//btn1 click
+
+           $(".btn2").click(function(){
+            $(".img_view").slideDown();
+           })//btn2 click
+           $(".btn3").click(function(){
+            $(".img_view").slideToggle();
+           })//btn3 click
+        })//j end
+    </script>
+</head>
+<body>
+        <h1>slide up down toggle</h1>
+        <button class="btn1">sideup</button>
+        <button class="btn2">sidedown</button>
+        <button class="btn3">sidetoggle</button>
+
+        <p class="img_view">
+            <img src="img/006.jpg" alt="car">
+        </p>
+</body>
+</html>
