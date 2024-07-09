@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+
+            $(".round").each(function(i){
+                console.log("i :" , i);
+                $(this).delay(i*500).animate({left : "500px"},2000)
+                .animate({left : "00px"},1000);
+            })//
+
+        })
+
+    </script>
+
+<style type="text/css">
+
+    *{margin: 0;padding: 0;}
+
+    ul,li,ol{list-style: none;}
+
+    body{background-color: blue; padding: 100px;}
+
+    .list{margin-top: 50px;}
+
+    .round{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: gold;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+
+
+</style>
+</head>
+<body>
+        <div class="box">
+                <h1>Each event</h1>
+                <ul class="list">
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                    <li class="round"></li>
+                </ul>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        document.write("전위후위  연산자 연습" + "<br>");
+        var a = 10, b=15 , c=6 ;
+        
+        document.write ( a -- + "<br>"); //출력 a = 10 메모리 a= 9
+        document.write (  -- a + b-- + "<br>"); //출력 a = 10 메모리 a= 9
+
+        document.write(++a + --b + c-- + "<br>");
+            //             8     14    6
+            //             9   + 13 + 6
+            //                         5
+            // //출력 9+13+6
+            // a=9   b=13  c=5
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

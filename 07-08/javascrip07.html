@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <script lang="java">
+        var price, sale;
+
+        price =prompt("점수를입력하세요");
+
+        var score ;
+            score = prompt("점수를 입력하세요");
+            
+            if( price>= 10000 ) {
+                sale =price * 0.1;
+                document.write(sale + "원이 할인되었습니다.");
+            
+            }else if (price >=50000){
+                    sale = price * 0.05 ;
+                    document.write(sale + "원이 할인되었습니다.");
+
+            }else if (price >=3000){
+                    sale = price * 0.03 ;
+                    document.write(sale + "원이 할인되었습니다.");
+
+            }else if (price >=1000){
+                    sale = price * 0.01 ;
+                    document.write(sale + "원이 할인되었습니다.");
+
+            }else {
+                    document.write("할인 금액이 없습니다.");
+
+            } //if
+
+        // 가격이 10000 이상이면
+        //     0.1sale
+        // 5000 이상이면
+        //     0.05
+        // 3000 이상이면 /
+        // 0.01
+        // 나머지는 할인 없어용
+        
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

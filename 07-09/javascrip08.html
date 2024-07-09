@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        body {
+
+        }
+        .wrap{
+            /* width: 1000px;
+            height: 500px; */
+            width: 90vw;
+            height: 500px;
+            border: 5px solid grey;
+            box-sizing: border-box;
+        }
+        
+        @media screen and (orientation : landscape){
+            /* orientation : landscape (가로방향이 더 클때)  */
+            body{background-color: red;}
+            h1{color: green;}
+          
+        }
+        @media screen and (orientation : portrait){
+           /* orientation : landscape (세로방향이 더 클때)  */
+            body{background-color: greenyellow;}
+            h1{color: yellow;}
+            
+        }
+        /* 가로방향이면 red
+        세로방향이면 green */
+
+    </style>
+</head>
+<body>
+        <div class="wrap">
+            <h1></h1>
+            
+        </div>
+</body>
+</html>

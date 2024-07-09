@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+
+        var a = "A";
+        var b = "B";
+        document.write("<h1>자바스크립트 관계연산자 2 </h1>")
+        c = a<b  && a==b; //&& 그리고 and
+            //65 < 66 그리고 65 == 66
+
+        document.write( c + "<br>");
+
+        document.write( c + "<br>"); //false
+
+        c = a<b  || a==b; // ||  또는 or.
+        //65<66 또는 65 == 66
+        // t            f      t
+        document.write( c + "<br>"); //true
+
+        c = a>b || a!=b ;
+        //f 65>66 t 65 같지않다 66'
+        document.write( c +"<br>");//true
+
+        c = ! 2 || 3 && ! 0 ;
+                true  
+                    // &&결과  true
+
+                    // ! : not의미 한다 부정
+
+
+
+        // document.write("<h1> 자바스크립트 관계연산자 </h1>");
+
+        
+
+        // // var a = 10;
+        // // var b = 5;
+        // // //var c;
+
+        // // c= a > b;
+
+        // // //10 > 5
+        // //     document.write(c + "<br>");
+        
+        // // c = a < b ;
+        // // // 10 < 5  
+        // // document.write( c + "<br>");
+
+        // // c = a == b;
+        // //     //10 == 5 a가b보다 같니?
+        // //     document.write( c + "<br>"); //false
+        // // c = a != b;
+        // //     //10 == 5 a가b보다 같니?
+        // //     document.write( c + "<br>"); //false
+
+
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

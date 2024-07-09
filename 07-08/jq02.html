@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        .wrap{margin-top: 50px;}
+        .fade{
+            width: 600px;height: 400px;
+            margin: 100px auto;
+            border: 20px groove goldenrod;
+            position: relative;
+        }
+        .fade li{
+            width: 600px;
+            height: 400px;
+            position: absolute;
+        }
+        .fade li a{}
+        .fade li a img{}
+    </style>
+
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+                $(".fade li").eq(0).siblings().hide();
+                var i = 0 ; //현재 보이는 이미지 인덱스 번호
+
+                setInterval(function(){ 
+
+                    console.log("i_1 :" , i);
+                    $(".fade li").eq(i).fadeOut();
+
+                        if( i < 4){
+                            i++;
+                            //i =i+i;0
+                            //i + i
+                    }else{
+                        i=0;
+                }//if
+                
+                console.log("i_2 :" , i);  
+                $(".fade li").eq(i).fadeIn();
+
+            },3000);
+
+        })//jqend
+
+    </script> 
+
+</head>
+<body>
+        <h1>fade in out setInterval</h1>
+        <div class="wrap">
+            <ul class="fade">
+                <li><a href="#"><img src="img/animal01.png" alt="animal01"></a></li>
+                <li><a href="#"><img src="img/animal02.png" alt="nimal02"></a></li>
+                <li><a href="#"><img src="img/animal03.png" alt="animal03"></a></li>
+                <li><a href="#"><img src="img/animal04.png" alt="animal04"></a></li>
+                <li><a href="#"><img src="img/animal05.png" alt="nimal05"></a></li>
+            </ul>
+        </div>
+</body>
+</html>

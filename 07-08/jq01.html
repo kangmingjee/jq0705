@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Script/jquery-3.7.1.js"></script>
+
+    <script lang="java">
+        $(function(){
+            setInterval( function(){
+                console.log("안녕하세요");
+            },1000);
+            setTimeout(function(){
+                console.log("잘가~");
+            },3000);
+
+            var n = 0; //0 1 2 3 4 5  n은 현재 도트 번호
+
+            setInterval(function(){
+                if(n == 5){
+                    n=0;
+                }else{
+                    n++;
+                }//if
+                console.log(n);
+
+                $(".dot li").removeClass("on");
+                $(".dot li").eq(n).addClass("on");
+
+            } , 2000) //setinterval
+
+            $(".dot li").hover(function(){
+                clearInterval(time);
+            },function(){
+                if(n == 5){
+                    n=0;
+                }else{
+                    n++;
+                }//if
+                console.log(n);
+
+                $(".dot li").removeClass("on");
+                $(".dot li").eq(n).addClass("on");
+            } , 2000) //setinterval
+            })//jqend
+
+
+
+
+                
+
+
+    
+    </script>
+
+    <style type="text/css"> 
+        *{margin: 0;padding: 0;}
+        ul,li,ol{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+
+        body{
+            background: #555;
+            color: white;
+            padding: 100px;
+        }
+        .dot{
+            margin-top: 50px;
+        }
+        .dot li{
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .dot li a{
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: white;
+            text-indent: -99999px;
+        }
+        .dot li a:hover{
+            background-color: red;
+        }
+        .dot li.on a{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+        <h1>SetInterval</h1>
+        <ul class="dot">
+            <li class="on"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+</body>
+</html>
