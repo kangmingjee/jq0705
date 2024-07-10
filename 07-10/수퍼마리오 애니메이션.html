@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .wrap{
+            width: 700px;
+            margin: 100px auto;
+            border: 2px solid black;
+            text-align: center;
+        }
+        .view{
+            /* border: 1px solid red; */
+            padding-top: 700px;
+        }
+        .view img{
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.2s;
+        }
+        .view img.ani{
+            transform: scale(1);
+            opacity: 1;
+        }
+        .view img:hover{
+            filter: sepia( ) blur(5px);
+        }
+        .box{
+            position: relative;
+            left: -800px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .box in{
+            left: 0;
+            opacity: 1;
+        }
+        .box2{
+            position: absolute;
+            right: -800px;
+            top: 1300px;
+            opacity:0;
+            transition: all 0.5s 0.3s;
+        }
+        .box2.in{
+            right: 0px;
+            opacity: 1;
+        }
+
+    </style>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+
+        })//jqend
+        $(document).scroll(function(){
+            var t = $(this).scrollTop();
+
+            console.log(t);
+
+            if( t >= 80){
+                $(".view img").each(function(i){
+                setTimeout(function(){$(".view img").eq(i).addClass("ani")}, i *300);
+            })//each
+            }else{
+                $(".view img").each(function(i){
+                    setTimeout(function(){$(".view img").eq(i).removeClass("ani")},i * 300);
+            })///each
+        }//if   
+         if( t >= 100){
+            $(".box").addClass("in");
+            $(".box2").addClass("in");
+         }else{
+            $(".box").removeClass("in"); 
+            $(".box2").removeClass("in"); 
+         }
+
+        })/* /scroll */
+
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>스크롤하면 차례대로  실행되는 애니메이션 ↓</h1>
+        <div class="view">
+            <img src="img/icon01.png" alt="icon01">
+            <img src="img/icon02.png" alt="icon02">
+            <img src="img/icon03.png" alt="icon03">
+        </div>
+
+        <p>이미지에 마우스를 올려 보세요 hover ↑</p>
+    </div>
+</body>
+</html>

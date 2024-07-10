@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .gallery{
+            margin: 50px 0;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+
+    </style>
+    <script src="Script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+
+                var n = 1; //이미지 그림파일 nomal_01의 1
+
+                $(".app").click(function(){
+                    if(n < 9){
+                        n++;
+                    }else{
+                        n=1;
+                    }//if   
+
+                    console.log(n);
+                    
+                    var imgPath = '<img src="img/normal_0' + n  + '.png" alt="normal_01">';
+                    $(".gallery").append( imgPath);
+
+
+                    // // $(".gallery").append ('<img src=" img/normal_01.png " alt=" normal_01 ">');
+
+                    // $(".gallery").append('<img src="img/normal_0" + n + ".png" alt="normal_01">');
+                })//click
+
+         })//
+
+    </script>
+</head>
+<body>
+        <div class="box">
+            <h1>Append prepend</h1>
+            <button class="app">append</button>
+            <div class="gallery">
+                <!-- <img src="img/normal_01.png" alt="normal_01">
+                <img src="img/normal_02.png" alt="normal_02">
+                <img src="img/normal_03.png" alt="normal_03"> -->
+            </div>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    *{margin: 0;padding: 0;}
+    a{text-decoration: none;}
+    ul,li,ol{list-style: none;}
+    
+    body{background-color: black;}
+    h1{ text-align: center;
+        line-height: 3;
+        font-weight: bold;
+        font-size: 40px;
+        color: aliceblue;
+        text-shadow: 0 0 10px orangered;
+}
+.gallery{
+    /* border: 1px solid red; */
+}
+.view{
+    border: 10px solid white;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.top_mov{
+    position: absolute;
+    left: 0; top: 0;
+    width: 600px;
+    /* height: calc(400px * 6); */
+}
+.top_mov li{
+    width: 600px;
+    height: 400px;
+}
+.control{
+    text-align: center;
+}
+.control button{
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+    </style>
+
+
+<script src="Script/jquery-3.7.1.js"></script>
+<script lang="java">
+
+    $(function(){
+
+        <!-- //setinterval(function(){}, 3000); -->
+
+        var time = setInterval( top_moving , 3000);
+        var n = 0; //0123456
+        function top_moving(){
+            if(n == 7){
+                n=0;
+            }else{
+                n++;
+            }
+            console.log(n)
+            position = n * (-400) + "px";
+        
+            $(".top_mov").animate({top : position}, 500)
+
+        }//function top_mov()
+
+        $(".top_mov , .control button ").hover(function(){
+            clearInterval(time);
+        },function(){
+            time = setInterval( top_moving , 3000);
+        })///hover
+
+        $(".prev").click(function(){
+            down_moving();
+        })//prev click
+
+        $(".next").click(function(){
+            top_moving();
+        })//prev click
+        function down_moving(){
+            if( n== 0){
+                n=7;
+            }else{
+                n--;
+            }
+            console.log(n);
+            position = n *(-400) +"px";
+            $(".top_mov").animate({top : position }, 500);
+        }  
+
+
+    })//jq end
+</script>
+</head>
+<body>
+        <h1>Top slide imges</h1>
+
+        <div class="gallery">
+            <div class="view">
+                <ul class="top_mov">
+                    <li><a href="#"><img src="img/animal01.png" alt="animal01"></a></li>
+                    <li><a href="#"><img src="img/animal02.png" alt="animal02"></a></li>
+                    <li><a href="#"><img src="img/animal03.png" alt="animal03"></a></li>
+                    <li><a href="#"><img src="img/animal04.png" alt="animal03"></a></li>
+                    <li><a href="#"><img src="img/animal05.png" alt="animal03"></a></li>
+                    <li><a href="#"><img src="img/animal06.png" alt="animal03"></a></li>
+                    <li><a href="#"><img src="img/animal07.png" alt="animal03"></a></li>
+                    <li><a href="#"><img src="img/animal08.png" alt="animal03"></a></li>
+                </ul>   <!-- view -->
+            </div><!-- top_mov -->
+            <div class="control">
+                <button class="prev">prev</button>
+                <button class="next">next</button>
+            </div><!-- control -->
+
+
+
+        </div><!-- gallery -->
+</body>
+</html>
